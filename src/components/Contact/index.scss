@@ -1,0 +1,98 @@
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 20px;
+
+    input {
+      flex: 1;
+    }
+  }
+
+  input[type='text'],
+  input[type='email'] {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    height: 50px;
+    font-size: 16px;
+    color: #333;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    height: 150px;
+    font-size: 16px;
+    color: #333;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .send-button {
+    align-self: flex-end;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    width: auto;
+  }
+}
+
+.info-map {
+  position: absolute;
+  background-color: #000;
+  top: 50px;
+  right: 30%;
+  z-index: 999999;
+  width: 267px;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+    display: block;
+    color: #ffd700;
+  }
+}
+
+.map-wrap {
+  background-color: rgba(8, 253, 216,0.31);
+  float: right;
+  width: 53%;
+  height: 100%;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  animation: backInRight 1s 1.2s;
+  animation-fill-mode: forwards;
+}

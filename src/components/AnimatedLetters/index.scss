@@ -1,0 +1,33 @@
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 1s 1s forwards;
+    min-width: 10px;
+  
+    // Animation delay classes
+    @for $i from 1 through 35 {
+      &._#{$i} {
+        animation-delay: #{$i/10}s;
+      }
+    }
+  
+    // Hover state
+    &:hover {
+      animation: rubberBand 1s;
+      color: #ffd700;
+    }
+  }
+  
+  // Separate class for hover state (not nested)
+  .text-animate-hover {
+    display: inline-block;
+    opacity: 1; // Should be visible by default
+    animation-fill-mode: both;
+    min-width: 10px;
+    
+    // You can add specific animations for hover state if needed
+    &:hover {
+      animation: rubberBand 1s;
+      color: #ffd700;
+    }
+  }
